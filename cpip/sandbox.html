@@ -1,0 +1,198 @@
+<!doctype html>
+
+<!-- =========================================================
+     CPIP | STRATEGIC CLINICAL SUITE HTML STRUCTURE
+========================================================= -->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="Interactive CPIP clinical AI validation sandbox for controlled model comparison and safety testing."
+      name="description"
+    />
+    <title>CPIP | Strategic Clinical Suite</title>
+    <meta
+      content="professional portfolio, software engineering, digital transformation, healthcare technology, AI safety, web technologies"
+      name="keywords"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="data:," rel="icon" />
+    <link href="css/sandbox.css" rel="stylesheet" />
+
+  </head>
+  <body id="page-body">
+    <!-- =====================================================
+         Main Content
+    ===================================================== -->
+
+    <main class="semantic-structure" id="main-content">
+      <div class="overlay" id="bgOverlay" onclick="exitFocus()"></div>
+      <aside class="help-overlay" id="gpuHelp">
+        <div class="help-card">
+          <h2>Fix WebGPU Error</h2>
+          <p>Your browser found the WebGPU API but cannot access your graphics
+            card hardware.</p>
+          <ol>
+            <li>
+              Go to
+              <code> chrome://settings/system </code>
+            </li>
+            <li>
+              Enable
+              <b> "Use graphics acceleration when available" </b>
+              .
+            </li>
+            <li>Restart your browser (must close all windows).</li>
+            <li>
+              On Windows: Go to
+              <b> Graphics Settings </b>
+              and set Chrome/Edge to
+              <b> "High Performance" </b>
+              .
+            </li>
+            <li>
+              If using a laptop, ensure it is
+              <b> plugged into power </b>
+              .
+            </li>
+            <li>
+              If issue persists, visit
+              <code> chrome://flags </code>
+              and search for
+              <b> "Unsafe WebGPU" </b>
+              and set it to Enabled.
+            </li>
+            <li>
+              See more technical fixes on
+              <a href="https://github.com/mlc-ai/web-llm/issues"
+                target="_blank"
+               rel="noopener noreferrer">
+                GitHub Issues</a>
+              .
+            </li>
+          </ol>
+          <button
+            class="close-help"
+            onclick="document.getElementById('gpuHelp').style.display='none'"
+          >
+            Close
+          </button>
+        </div>
+      </aside>
+
+      <!-- ======================================================================
+           Clinical Context Modal
+      ====================================================================== -->
+
+      <div class="clinical-context-modal help-overlay" id="specModal">
+        <div class="clinical-context-card help-card">
+          <h2 class="clinical-context-title">
+            Authentication Required
+          </h2>
+          <p class="clinical-context-description">
+            To initialize the Clinical Safety Kernel, please define your medical
+            specialty.</p>
+          <input
+            aria-label="Medical specialty"
+            class="spec-input"
+            id="specInput"
+            placeholder="e.g. Family Medicine"
+            type="text"
+          />
+          <button class="btn-gold safe-action-btn" onclick="setContext()">
+            Initialize System
+          </button>
+        </div>
+      </div>
+      <header id="site-header">
+        <div class="header-left">
+          <img alt="CPIP Logo" class="header-logo" src="cpip_logo.png" />
+          <div class="header-brand">
+            <h1>CPIP</h1>
+            <p>CLINICAL PRECISION INTELLIGENCE</p>
+          </div>
+        </div>
+        <nav aria-label="Sandbox utilities" class="header-right">
+          <div class="specialty-summary">
+            <div class="elegant-title" id="displaySpec">No Specialty Set</div>
+            <div class="trainer-info">Medical Expert AI Trainer</div>
+          </div>
+          <div class="kernel-status status-online" id="kStatus">
+            CPIP ACTIVE
+          </div>
+        </nav>
+      </header>
+
+      <!-- =====================================================
+           CPIP Protocol Ready
+      ===================================================== -->
+
+      <section class="simulation-grid" id="cpip-protocol-ready">
+        <article class="panel">
+          <div class="panel-header standard-ai-title">
+            Standard AI
+          </div>
+          <div class="chat-area" id="stdOut">
+            <button class="btn-gold full-width-btn"
+              onclick="window.open('https://gemini.google.com/', '_blank')">
+              Launch Standard Gemini
+            </button>
+          </div>
+        </article>
+        <article class="panel">
+          <div class="cpip-audit-title panel-header">
+            CPIP Protocol Audit
+          </div>
+          <div class="chat-area" id="cpipOut">
+            <a class="protocol-download-btn btn-gold"
+              href="https://colab.research.google.com/drive/1gqvA4MZuv5FYtLZi8ASfTLnXcofM7S7H?usp=sharing"
+              target="_blank" rel="noopener noreferrer">
+              DOWNLOAD / OPEN CPIP PROTOCOL</a>
+            <div class="protocol-ready-content">
+              <h3 class="cpip-audit-title">CPIP Protocol Ready</h3>
+              <p class="protocol-instructions">
+                1. Click "Launch Audit" below.
+                <br />
+                2. In Gemini, click the "+" icon.
+                <br />
+                3. Upload
+                <b> CPIP.ipng </b>
+                to activate the Kernel.</p>
+              <button class="btn-gold safe-action-btn" onclick="openCPIPWithContext()">
+                Launch CPIP Audit
+              </button>
+            </div>
+          </div>
+        </article>
+      </section>
+      <footer class="controls-footer" id="mainFooter">
+        <div class="input-row">
+          <button aria-label="Start or stop voice input" class="mic-btn" id="mic"
+            onclick="toggleMic()" type="button">🎤</button>
+          <textarea
+            aria-label="Clinical audit message"
+            class="main-input"
+            id="userInput"
+            onfocus="enterFocus()"
+            oninput="updateHeight(this)"
+            placeholder="Start Voice Audit..."
+          ></textarea>
+          <button class="btn-gold" onclick="sendMsg()">Send</button>
+          <button class="btn-gold next-step-btn" onclick="location.href='questions.html'">
+            Next
+          </button>
+        </div>
+      </footer>
+      <script
+        id="page-interaction-script"
+        src="js/sandbox.js"
+        type="module"
+      ></script>
+    </main>
+  </body>
+</html>

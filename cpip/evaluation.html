@@ -1,0 +1,112 @@
+<!doctype html>
+
+<!-- =========================================================
+     CPIP | STRATEGIC EVALUATION HTML STRUCTURE
+========================================================= -->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="Strategic CPIP evaluation form for clinical AI governance, integration and expert validation."
+      name="description"
+    />
+    <title>CPIP | Strategic Evaluation</title>
+    <meta
+      content="professional portfolio, software engineering, digital transformation, healthcare technology, AI safety, web technologies"
+      name="keywords"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/evaluation.css" rel="stylesheet" />
+  </head>
+  <body id="page-body">
+    <!-- =====================================================
+         Main Content
+    ===================================================== -->
+
+    <main class="semantic-structure" id="main-content">
+      <div class="container">
+        <header class="header" id="site-header">
+          <h1>Strategic Evaluation</h1>
+        </header>
+        <section class="evaluation-card" id="strategic-evaluation-form">
+          <div class="field-row">
+            <div class="input-group">
+              <label for="physicianName">Physician Full Name</label>
+              <input
+                id="physicianName"
+                placeholder="Dr. Ahmed Ali"
+                type="text"
+              />
+            </div>
+            <div class="input-group">
+              <label for="physicianSpec">Medical Speciality</label>
+              <input
+                id="physicianSpec"
+                placeholder="e.g. family medicine"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="input-group">
+              <label for="physicianOrg">Organization / Hospital</label>
+              <input id="physicianOrg" placeholder="e.g. JHAH" type="text" />
+            </div>
+            <div class="input-group">
+              <label for="physicianPhone">Contact Number</label>
+              <input
+                id="physicianPhone"
+                placeholder="+966 5X XXX XXXX"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="email-input-group input-group">
+            <label for="physicianEmail">Official Email Address</label>
+            <input
+              id="physicianEmail"
+              placeholder="doctor@organization.com"
+              type="email"
+            />
+          </div>
+          <div class="strategic-question-box">
+            <div class="q-text" id="ehrQuestion">
+              Do you recommend the integration of the CPIP protocol into medical
+              organization systems (EHR)?
+            </div>
+            <div class="opt-grid">
+              <button class="opt-btn" onclick="sel(this)">
+                Strongly Recommend
+              </button>
+              <button class="opt-btn" onclick="sel(this)">Recommend</button>
+              <button class="opt-btn" onclick="sel(this)">
+                Not Recommended
+              </button>
+            </div>
+          </div>
+          <label for="drVision">Ultimate Strategic Vision</label>
+          <p class="core-question" id="coreQuestion">
+            What is your ultimate vision for integrating AI into the clinical
+            safety framework of your organization?</p>
+          <textarea class="vision-response" id="drVision"
+            placeholder="Describe your future vision for AI safety..."></textarea>
+          <footer class="semantic-structure">
+            <aside aria-label="Report action" class="semantic-structure">
+              <nav aria-label="Report action" class="semantic-structure">
+                <button class="btn-report" onclick="saveAndGo()">
+                  Generate Final Audit Report →
+                </button>
+              </nav>
+            </aside>
+          </footer>
+        </section>
+      </div>
+      <script id="page-interaction-script" src="js/evaluation.js"></script>
+    </main>
+  </body>
+</html>

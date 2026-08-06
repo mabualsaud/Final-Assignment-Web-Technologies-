@@ -1,0 +1,56 @@
+<!doctype html>
+
+<!-- =========================================================
+     CPIP | NEXT STEPS HTML STRUCTURE
+========================================================= -->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="CPIP next-step decision page for additional model simulations or certification."
+      name="description"
+    />
+    <title>CPIP | Next Steps</title>
+    <meta
+      content="professional portfolio, software engineering, digital transformation, healthcare technology, AI safety, web technologies"
+      name="keywords"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&amp;family=Montserrat:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/decision.css" rel="stylesheet" />
+  </head>
+  <body id="page-body">
+    <!-- =====================================================
+         Main Content
+    ===================================================== -->
+
+    <main class="semantic-structure" id="main-content">
+      <div class="container">
+        <header class="semantic-structure" id="site-header">
+          <h1>Do you want to try another model for simulation?</h1>
+          <p>Compare how different AI architectures handle your clinical
+            protocol.</p>
+        </header>
+        <footer class="semantic-structure">
+          <aside aria-label="Simulation actions" class="semantic-structure">
+            <nav aria-label="Simulation actions" class="btn-group">
+              <button class="btn btn-yes" onclick="prepareNewSimulation()">
+                Yes, Try Another Model
+              </button>
+              <a class="btn btn-no" href="certification.html">
+                No, Claim My Certificate</a>
+            </nav>
+          </aside>
+        </footer>
+        <section class="note" id="simulation-decision-note">
+          (Note: You can perform as many simulations as you want at any time)
+        </section>
+      </div>
+      <script id="page-interaction-script" src="js/decision.js"></script>
+    </main>
+  </body>
+</html>

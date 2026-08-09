@@ -173,15 +173,15 @@ html {
 2. MAIN NAVIGATION
 ========================================================================== */
 
-.side-navigation-list,
-.side-navigation-list li {
-  display: contents;
-}
-
 .side-navigation-list {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.side-navigation-list,
+.side-navigation-list li {
+  display: contents;
 }
 
 .side-navigation {
@@ -342,6 +342,7 @@ html {
 }
 
 .home-hero {
+  position: relative;
   width: 100%;
   min-width: 0;
   box-sizing: border-box;
@@ -351,10 +352,16 @@ html {
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-bottom: -50px;
 }
 
 .home-hero .top-uni-logo {
-  margin-bottom: 24px;
+  position: absolute;
+  top: -42px;
+  left: 50%;
+  width: 190px;
+  margin: 0;
+  transform: translateX(-50%);
 }
 
 .home-eyebrow {
@@ -371,6 +378,11 @@ html {
   max-width: 850px;
   margin: 18px auto 30px;
   line-height: 1.65;
+}
+
+.home-hero h1,
+.home-hero .subtitle {
+  transform: translateY(38px);
 }
 
 /* ==========================================================================
@@ -1262,6 +1274,12 @@ html {
     flex-flow: row nowrap !important;
   }
 
+  .home-page .side-navigation-list {
+    flex-flow: row nowrap;
+    gap: 6px;
+    width: auto;
+  }
+
   .home-page .side-navigation a {
     flex: 0 0 40px;
     width: 40px;
@@ -1282,6 +1300,10 @@ html {
     gap: 8px;
     font-size: 11px;
     letter-spacing: 0;
+  }
+
+  .home-page .side-navigation-list {
+    display: contents;
   }
 
   .top-portfolio-button .fa-arrow-right {
@@ -1324,6 +1346,17 @@ html {
     min-height: 500px;
     overflow: hidden;
     padding-inline: 6px;
+    margin-bottom: -24px;
+  }
+
+  .home-hero h1,
+  .home-hero .subtitle {
+    transform: translateY(20px);
+  }
+
+  .home-hero .top-uni-logo {
+    top: 6px;
+    width: 100px;
   }
 
   .home-hero h1 {
@@ -1407,4 +1440,317 @@ Keep borders visible when hover is unavailable.
     border-color: rgba(255,255,255,.18) !important;
   }
 
+}
+
+/* ========================================================================== 
+MEDICINE MEETS SOFTWARE | FEATURED STORY
+========================================================================== */
+
+.bridge-story-card {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(410px, 0.92fr);
+  align-items: center;
+  gap: clamp(34px, 5vw, 72px);
+  width: 100%;
+  margin: 25px 0 34px;
+  padding: clamp(34px, 5vw, 58px);
+  overflow: hidden;
+  text-align: left;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(34, 211, 238, 0.11), transparent 30%),
+    radial-gradient(circle at 14% 86%, rgba(212, 175, 55, 0.09), transparent 34%),
+    linear-gradient(145deg, rgba(16, 20, 28, 0.92), rgba(4, 6, 11, 0.98));
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 30px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.045),
+    0 30px 90px rgba(0, 0, 0, 0.5);
+}
+
+.bridge-story-card::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, #d4af37, #a855f7 52%, #22d3ee);
+  box-shadow: 0 0 22px rgba(34, 211, 238, 0.3);
+  content: "";
+}
+
+.bridge-story-copy {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+
+.bridge-story-eyebrow {
+  display: block;
+  margin-bottom: 14px;
+  color: #d4af37;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.22em;
+}
+
+.bridge-story-copy h2 {
+  max-width: 720px;
+  margin: 0 0 20px;
+  color: #fff;
+  font-size: clamp(2.35rem, 4vw, 4.25rem);
+  line-height: 1.02;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.bridge-no-break {
+  white-space: nowrap;
+}
+
+.bridge-story-copy > p {
+  max-width: 680px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 17px;
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+
+.bridge-story-concepts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 25px 0 28px;
+}
+
+.bridge-story-concepts span {
+  padding: 9px 13px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.bridge-story-concepts .concept-html {
+  color: #e1bd42;
+  border-color: rgba(212, 175, 55, 0.32);
+}
+
+.bridge-story-concepts .concept-css {
+  color: #c98aff;
+  border-color: rgba(168, 85, 247, 0.34);
+}
+
+.bridge-story-concepts .concept-js {
+  color: #67e8f9;
+  border-color: rgba(34, 211, 238, 0.32);
+}
+
+.bridge-story-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 0 22px;
+  color: #071017;
+  background: linear-gradient(110deg, #d4af37, #f5d96d 38%, #22d3ee);
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.16);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 900;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.bridge-story-action:hover,
+.bridge-story-action:focus-visible {
+  transform: translateY(-3px);
+  box-shadow:
+    0 16px 34px rgba(212, 175, 55, 0.2),
+    0 0 24px rgba(34, 211, 238, 0.16);
+  outline: none;
+}
+
+.bridge-story-action i {
+  transition: transform 0.28s ease;
+}
+
+.bridge-story-action:hover i,
+.bridge-story-action:focus-visible i {
+  transform: translateX(5px);
+}
+
+.bridge-story-visual {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  min-width: 0;
+  height: 390px;
+  perspective: 1000px;
+}
+
+.bridge-visual-panel {
+  position: relative;
+  min-width: 0;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #05070a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.48);
+  transition: transform 0.35s ease, border-color 0.35s ease, filter 0.35s ease;
+}
+
+.bridge-visual-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.78) saturate(0.9);
+  transition: transform 0.5s ease, filter 0.35s ease;
+}
+
+.bridge-tech-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  min-height: 38px;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(2, 4, 8, 0.98), rgba(2, 4, 8, 0.88));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+}
+
+.visual-html .bridge-tech-label {
+  color: #e1bd42;
+}
+
+.visual-css .bridge-tech-label {
+  color: #c98aff;
+}
+
+.visual-js .bridge-tech-label {
+  color: #67e8f9;
+}
+
+.bridge-visual-panel figcaption {
+  position: absolute;
+  right: 8px;
+  bottom: 10px;
+  left: 8px;
+  padding: 9px 5px;
+  color: #fff;
+  background: rgba(2, 4, 8, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.visual-html {
+  transform: translateY(18px) rotateY(5deg);
+  border-color: rgba(212, 175, 55, 0.32);
+}
+
+.visual-css {
+  transform: translateY(-8px);
+  border-color: rgba(168, 85, 247, 0.36);
+}
+
+.visual-js {
+  transform: translateY(18px) rotateY(-5deg);
+  border-color: rgba(34, 211, 238, 0.34);
+}
+
+.bridge-story-card:hover .bridge-visual-panel {
+  transform: translateY(0) rotateY(0);
+}
+
+.bridge-story-card:hover .bridge-visual-panel img {
+  transform: scale(1.06);
+  filter: brightness(0.96) saturate(1.05);
+}
+
+@media (max-width: 950px) {
+  .bridge-story-card {
+    grid-template-columns: 1fr;
+  }
+
+  .bridge-story-visual {
+    order: -1;
+    height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bridge-story-card {
+    gap: 28px;
+    margin-top: 18px;
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .bridge-story-visual {
+    height: 230px;
+    gap: 6px;
+  }
+
+  .bridge-visual-panel {
+    border-radius: 15px;
+  }
+
+  .bridge-visual-panel figcaption {
+    right: 4px;
+    bottom: 5px;
+    left: 4px;
+    padding: 6px 2px;
+    font-size: 7px;
+    letter-spacing: 0.035em;
+  }
+
+  .bridge-tech-label {
+    min-height: 30px;
+    font-size: 11px;
+  }
+
+  .bridge-story-copy h2 {
+    max-width: 100%;
+    font-size: clamp(1.85rem, 9vw, 2.45rem);
+    overflow-wrap: anywhere;
+  }
+
+  .bridge-story-copy > p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .bridge-story-concepts {
+    display: grid;
+  }
+
+  .bridge-story-concepts span {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .bridge-story-action {
+    width: 100%;
+  }
 }

@@ -254,6 +254,10 @@ h1 {
 ========================================================================== */
 
 .launch-action {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
   animation: fadeInUp 1.8s ease-out;
 }
 
@@ -302,6 +306,19 @@ h1 {
 
 .luxury-btn i {
   transition: transform 0.3s ease;
+}
+
+.luxury-btn-secondary {
+  color: var(--accent-gold-light);
+  background: rgba(10, 13, 23, 0.72);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+.luxury-btn-secondary:hover,
+.luxury-btn-secondary:focus-visible {
+  color: #040508;
+  background: linear-gradient(135deg, var(--accent-gold-light) 0%, var(--accent-gold) 100%);
 }
 
 .luxury-btn:hover i,
@@ -389,6 +406,16 @@ h1 {
 ========================================================================== */
 
 @media (max-width: 768px) {
+  .launch-action {
+    width: 100%;
+  }
+
+  .luxury-btn {
+    justify-content: center;
+    width: min(100%, 330px);
+    padding: 16px 25px;
+  }
+
   .presentation-card {
     padding: 30px 20px;
   }

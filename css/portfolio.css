@@ -2544,3 +2544,14 @@ Keep borders visible when hover is unavailable.
   }
 
 }
+
+/* ========================================================================== 
+   PROJECT DROPDOWN | RESEARCH & PROJECTS HIERARCHY
+========================================================================== */
+.site-pages-list > .project-pages-group { display:block !important; margin:4px 0 !important; }
+.site-pages-list .project-pages-parent { color:#fff !important; background:linear-gradient(90deg,rgba(34,211,238,.16),rgba(168,85,247,.11)) !important; border-color:rgba(103,232,249,.24) !important; }
+.project-pages-submenu { position:static !important; width:auto !important; max-height:none !important; margin:7px 0 3px 20px !important; padding:3px 0 3px 12px !important; display:grid !important; grid-template-columns:1fr !important; gap:4px !important; overflow:visible !important; list-style:none !important; background:transparent !important; border:0 !important; border-left:1px solid rgba(103,232,249,.28) !important; border-radius:0 !important; box-shadow:none !important; backdrop-filter:none !important; }
+.project-pages-submenu li { display:block !important; }
+.site-pages-list .project-pages-submenu a { min-height:39px !important; padding:7px 11px !important; font-size:12.5px !important; font-weight:650 !important; background:rgba(255,255,255,.018) !important; border-radius:10px !important; }
+.site-pages-list .project-pages-submenu a i { width:18px !important; font-size:13px !important; color:#c084fc !important; }
+.site-pages-list .project-pages-submenu a:hover,.site-pages-list .project-pages-submenu a:focus-visible { background:linear-gradient(90deg,rgba(34,211,238,.11),rgba(217,70,239,.08)) !important; border-color:rgba(103,232,249,.18) !important; transform:translateX(3px) !important; }
